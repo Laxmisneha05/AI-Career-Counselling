@@ -2,9 +2,11 @@ from langchain.document_loaders import PyPDFLoader, DirectoryLoader
 from langchain import PromptTemplate
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import FAISS
-from langchain.llms import CTransformers
+from langchain.llms import LlamaCpp
 from langchain.chains import RetrievalQA
-import chainlit as cl
+from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
+from langchain.callbacks.manager import CallbackManager
+# import chainlit as cl
 
 DB_FAISS_PATH = 'vectorstores/db_faiss'
 
@@ -39,18 +41,25 @@ def retrieval_qa_chain(llm, prompt, db):
 #Loading the model
 def load_llm():
     # Load the locally downloaded model here
-    llm = CTransformers(
-        model = "llama-2-7b.ggmlv3.q8_0.bin",
-        model_type="llama",
-        max_new_tokens = 512,
-        temperature = 0.5
+
+    # Callbacks support token-wise streaming
+    callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])
+
+    # Make sure the model path is correct for your system!
+    llm = LlamaCpp(
+        model_path="llama-2-7b-chat.Q5_K_M.gguf",
+        temperature=0,
+        max_tokens=100,
+        top_p=1,
+        callback_manager=callback_manager, 
+        verbose=True, # Verbose is required to pass to the callback manager
     )
     return llm
 
 #QA Model Function
 def qa_bot():
     embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2",
-                                       model_kwargs={'device': 'cpu'})
+                                       model_kwargs={'device': 'cuda'})
     db = FAISS.load_local(DB_FAISS_PATH, embeddings)
     llm = load_llm()
     qa_prompt = set_custom_prompt()
@@ -64,32 +73,34 @@ def final_result(query):
     response = qa_result({'query': query})
     return response
 
+final_result("What is the path of arrange.py?")
 
-#chainlit code
-@cl.on_chat_start
-async def start():
-    chain = qa_bot()
-    msg = cl.Message(content="Starting the bot...")
-    await msg.send()
-    msg.content = "Hi, Welcome to OS Bot. What is your query?"
-    await msg.update()
 
-    cl.user_session.set("chain", chain)
+# #chainlit code
+# @cl.on_chat_start
+# async def start():
+#     chain = qa_bot()
+#     msg = cl.Message(content="Starting the bot...")
+#     await msg.send()
+#     msg.content = "Hi, Welcome to OS Bot. What is your query?"
+#     await msg.update()
 
-@cl.on_message
-async def main(message):
-    chain = cl.user_session.get("chain") 
-    cb = cl.AsyncLangchainCallbackHandler(
-        stream_final_answer=True, answer_prefix_tokens=["FINAL", "ANSWER"]
-    )
-    cb.answer_reached = True
-    res = await chain.acall(message, callbacks=[cb])
-    answer = res["result"]
-    sources = res["source_documents"]
+#     cl.user_session.set("chain", chain)
 
-    if sources:
-        answer += f"\nSources:" + str(sources)
-    else:
-        answer += "\nNo sources found"
+# @cl.on_message
+# async def main(message):
+#     chain = cl.user_session.get("chain") 
+#     cb = cl.AsyncLangchainCallbackHandler(
+#         stream_final_answer=True, answer_prefix_tokens=["FINAL", "ANSWER"]
+#     )
+#     cb.answer_reached = True
+#     res = await chain.acall(message, callbacks=[cb])
+#     answer = res["result"]
+#     sources = res["source_documents"]
 
-    await cl.Message(content=answer).send()
+#     if sources:
+#         answer += f"\nSources:" + str(sources)
+#     else:
+#         answer += "\nNo sources found"
+
+#     await cl.Message(content=answer).send()

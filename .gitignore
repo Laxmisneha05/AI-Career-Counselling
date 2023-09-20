@@ -1,4 +1,8 @@
-llama-2-7b.ggmlv3.q8_0.bin
+llama-2-7b-chat.Q5_K_M.gguf
 data/Abraham Silberschatz, Greg Gagne, Peter B. Galvin - Operating System Concepts-Wiley (2018).pdf
 vectorstores/
 .chainlit/
+data/
+keys.py
+test.py
+test1.py

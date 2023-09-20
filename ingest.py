@@ -1,7 +1,7 @@
 # Imports
 
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.document_loaders import PyPDFLoader, DirectoryLoader
+from langchain.document_loaders import PyPDFLoader, DirectoryLoader,CSVLoader
 from langchain.embeddings import HuggingFaceBgeEmbeddings
 from langchain.vectorstores import FAISS
 
@@ -15,7 +15,7 @@ DB_FAISS_PATH = "vectorstores/db_faiss"
 # Create Vector Database
 
 def create_vector_db():
-    loader = DirectoryLoader(DATA_PATH,glob='*.pdf',loader_cls=PyPDFLoader)
+    loader = DirectoryLoader(DATA_PATH,glob='*.csv',loader_cls=CSVLoader)
     documents = loader.load()
     text_splitter = RecursiveCharacterTextSplitter(chunk_size = 500, chunk_overlap = 50)
     texts = text_splitter.split_documents(documents)
