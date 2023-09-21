@@ -1,0 +1,211 @@
+
+*{
+    font-family: 'Open Sans';
+}
+.navu {
+    overflow: hidden;
+}
+
+.navu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+
+.navu-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-weight: 500;
+}
+
+.navu-links li {
+    margin-right: 20px;
+}
+
+.navu-links li:last-child {
+    margin-right: 0;
+}
+
+.navu-links a {
+    color: gray;
+    text-decoration: none;
+}
+
+
+.navu-right {
+    display: flex;
+    align-items: center;
+}
+
+.login-btn {
+    background-color: #66B1C3;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.register-btn {
+    background-color: #66B1C3;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbar-links {
+        display: none;
+    }
+    .navbar-right {
+        margin-left: auto;
+    }
+}
+
+.section-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+
+.left-section {
+    flex: 1;
+    padding: 20px;
+    
+}
+
+.left-section h2 {
+    font-size: 45px;
+    margin-bottom: 10px;
+    color: #3B438F;
+    font-weight: 800;
+}
+
+.left-section p {
+    font-size: 16px;
+    color: #585858;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.get-started-button {
+    background-color: #62AEC0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+.right-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+}
+
+
+@media screen and (max-width: 768px) {
+    .section-container {
+        flex-direction: column;
+    }
+
+    .left-section,
+    .right-section {
+        flex: auto;
+    }
+}
+
+/* Styles for the cards */
+.cards-container {
+    display: flex;
+    margin:20px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px; 
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1 0 calc(25% - 20px); 
+    margin-bottom: 20px;
+}
+
+.card-image {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.card-text {
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+}
+
+.get-in-button {
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0;
+}
+
+
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .card {
+        flex: 1 0 calc(50% - 20px);
+    }
+}
+
+
+/* Sneha's part */
+.btn-colour{
+    background-color: #62AEC0;
+}
+
+
+.navbar-custom{
+    background-color: #62AEC0;
+}
+
+
+.white-text{
+    color: white;
+}
+
+
+.text-align{
+    align-items: center;
+}
+
