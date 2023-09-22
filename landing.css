@@ -2,84 +2,19 @@
 *{
     font-family: 'Open Sans';
 }
-.navu {
-    overflow: hidden;
-}
 
-.navu-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
-
-
-.navu-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    font-weight: 500;
-}
-
-.navu-links li {
-    margin-right: 20px;
-}
-
-.navu-links li:last-child {
-    margin-right: 0;
-}
-
-.navu-links a {
-    color: gray;
-    text-decoration: none;
-}
-
-
-.navu-right {
-    display: flex;
-    align-items: center;
-}
-
-.login-btn {
-    background-color: #66B1C3;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    margin-right: 10px;
-    font-weight: 500;
-}
-
-.register-btn {
-    background-color: #66B1C3;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-weight: 500;
-}
-
-
-@media screen and (max-width: 768px) {
-    .navbar-links {
-        display: none;
-    }
-    .navbar-right {
-        margin-left: auto;
-    }
-}
 
 .section-container {
     display: flex;
     flex-wrap: wrap;
-    padding: 20px;
+    padding: 10px;
 }
 
 
 .left-section {
-    flex: 1;
-    padding: 20px;
+    margin-top: 80px;
+    flex: 1.3;
+    padding: 30px;
     
 }
 
@@ -87,7 +22,7 @@
     font-size: 45px;
     margin-bottom: 10px;
     color: #3B438F;
-    font-weight: 800;
+    font-weight: 900;
 }
 
 .left-section p {
@@ -108,19 +43,8 @@
 
 
 .right-section {
-    flex: 1;
-    padding: 20px;
-}
-
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-}
-
-.image-grid img {
-    width: 100%;
-    height: auto;
+    flex: 0.7;
+    padding: 5px;
 }
 
 
@@ -133,6 +57,14 @@
     .right-section {
         flex: auto;
     }
+    .image-grid {
+        grid-template-columns: 1fr;
+        
+    }
+    .image-frame #img3 {
+        margin-top: 20px;
+       
+    }
 }
 
 /* Styles for the cards */
@@ -141,7 +73,7 @@
     margin:20px;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 20px; 
+    gap: 10px; 
 }
 
 .card {
@@ -150,11 +82,11 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     flex: 1 0 calc(25% - 20px); 
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .card-image {
-    width: 100px;
+    width: 200px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -185,6 +117,12 @@
 
     .card {
         flex: 1 0 calc(50% - 20px);
+    }
+    .left-section {
+        margin-top: 10px;
+        flex: 1.3;
+        padding: 30px;
+        
     }
 }
 
