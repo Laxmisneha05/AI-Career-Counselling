@@ -1,3 +1,4 @@
+<?php require('inc/links.php'); ?>
 <!--Footer-->
 <div class="white-text">
 <div class="container-fluid navbar-custom mt-5">
@@ -34,9 +35,3 @@
 <!--Copyrights-->
 <h6 class="text-middle navbar-custom p-2 m-0">@copyrights 2023 - Career Expert. All rights reserved</h6>
 </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ZE2Pb34Vf2J8CAjSH7DTPG5dn5PqS6ta6dmb5l5T5iO4l1U5bz5Rkv5K5tze5z5WU"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
