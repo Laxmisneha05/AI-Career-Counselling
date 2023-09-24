@@ -69,8 +69,8 @@
         <div class="card" style="background-color: #FCC844;">
             <img src="images/man with rocket.png" alt="Class 10th" class="card-image">
             <div class="card-text">
-                <p style="font-weight: 800; font-size:large">For Class 11th & 12th students</p>
-                <p style="font-size: medium;">Helping you to get into your dream college & course </p>
+                <p style="font-weight: 800; font-size:large">Talk to AI : a.k.a Career Chatgpt</p>
+                <p style="font-size: medium;">Helping you to get into your dream C's a.k.a career,course,college with your AI </p>
             </div>
             <button class="get-in-button" style="color:#FCC844;">Get In</button>
         </div>
