@@ -56,6 +56,7 @@
                 <p style="font-size: medium;">Helping you to choose the right career & subjects</p>
             </div>
             <button class="get-in-button" style="color: #57E1FF;">Get In</button>
+            <button class="get-in-button" style="color: #57E1FF;">Take Test</button>
         </div>
 
         <div class="card" style="background-color: #2E6CB4;">
@@ -65,6 +66,7 @@
                 <p style="font-size: medium;">Helping you to get into your dream college & course </p>
             </div>
             <button class="get-in-button" style="color: #2E6CB4;">Get In</button>
+            <button class="get-in-button" style="color: #57E1FF;">Take Test</button>
         </div>
         <div class="card" style="background-color: #FCC844;">
             <img src="images/man with rocket.png" alt="Class 10th" class="card-image">
@@ -73,6 +75,7 @@
                 <p style="font-size: medium;">Helping you to get into your dream C's a.k.a career,course,college with your AI </p>
             </div>
             <button class="get-in-button" style="color:#FCC844;">Get In</button>
+            
         </div>
     </div>
   
