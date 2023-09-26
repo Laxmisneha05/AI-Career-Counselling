@@ -56,7 +56,7 @@
                 <p style="font-size: medium;">Helping you to choose the right career & subjects</p>
             </div>
             <button class="get-in-button" style="color: #57E1FF;">Get In</button>
-            <button class="get-in-button" style="color: #57E1FF;">Take Test</button>
+            <button class="get-in-button" style="color: #57E1FF;"><a href="quiz-old-version\">Take Test</a></button>
         </div>
 
         <div class="card" style="background-color: #2E6CB4;">

@@ -23,14 +23,7 @@
             <!--Buttons-->
             <div class="d-flex">
                 <button type="button" class="btn btn-danger  white-text shadow-none me-lg-3 me-2" data-toggle="modal" >
-                <a href="/career-counselling/AI-Career-Counselling/dashboard.php" class="text-white">User - Profile</a>
-
-                </button>
-                <button type="button" class="btn btn-colour btn-hover white-text shadow-none me-lg-3 me-2" data-toggle="modal" data-target="#loginModal">
-                    Login
-                </button>
-                <button type="button" class="btn btn-colour btn-hover white-text shadow-none me-lg-3 me-2" data-toggle="modal" data-target="#registerModal">
-                    Register
+                <a href="dashboard.php" class="text-white">User - Profile</a>
                 </button>
             </div>
         </div>

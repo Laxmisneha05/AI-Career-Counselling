@@ -17,7 +17,7 @@
         <div class="profile-dashboard-child"></div>
         <div class="frame-parent">
             <div class="black-1-parent">
-            <img class="black-1-icon" alt="" src="/career-counselling/AI-Career-Counselling/images/user.png" />
+            <img class="black-1-icon" alt="" src="images/user.png" />
 
                 <b class="shreya-sanap">Tarun Pandey</b>
             </div>
