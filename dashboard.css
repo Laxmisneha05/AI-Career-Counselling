@@ -381,10 +381,10 @@ body {
     position: absolute;
     top: 32px;
     left: 1148px;
-    font-size: var(--font-size-mini);
+    font-size: var(--fot-size-mini);
     display: inline-block;
     color: var(--color-orangered);
-    width: 96px;
+    width: 100px;
     height: 19px;
   }
   .profile-dashboard {

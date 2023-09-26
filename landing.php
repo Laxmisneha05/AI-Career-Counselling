@@ -66,7 +66,7 @@
                 <p style="font-size: medium;">Helping you to get into your dream college & course </p>
             </div>
             <button class="get-in-button" style="color: #2E6CB4;">Get In</button>
-            <button class="get-in-button" style="color: #57E1FF;">Take Test</button>
+            <button class="get-in-button" style="color: #57E1FF;"><a href="quiz-old-version\"></a>Take Test</button>
         </div>
         <div class="card" style="background-color: #FCC844;">
             <img src="images/man with rocket.png" alt="Class 10th" class="card-image">
