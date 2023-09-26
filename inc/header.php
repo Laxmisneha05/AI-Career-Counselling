@@ -1,7 +1,7 @@
 <?php require('inc/links.php'); ?>
 <nav class="navbar navbar-expand-md navbar-expand-lg navbar-light">
     <div class="container-fluid">
-        <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">
+        <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="landing.php">
             <img src="images/counselling center (1).png" width="50" height="50" class="logo ml-2" style="border-radius: 40px;" />
         </a>
         <button class="navbar-toggler shadow-none" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
